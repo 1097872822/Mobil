@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/search/search",
+    "pages/comment/index",
+    "pages/video_detail/index",
+    "pages/booknumall/index",
+    "pages/bookpai/index",
+    "pages/borrow/index",
+    "pages/index/index",
+    "pages/books_list/index",
+    "pages/login/index",
+    "pages/book_detail/index",
+    "pages/collect/index",
+    "pages/search/index",
+    "pages/feedback/index",
+    "pages/serchIn/searchIn",
+    "pages/personpai/index",
+    "pages/person_info/index",
+    "pages/changePwd/index",
+    "pages/mine/mine",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#d81e06",
+    "navigationBarTitleText": "移动校园图书馆",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#d81e06",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor":"#d81e06",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "icons/index.png",
+      "selectedIconPath": "icons/index_active.png"
+    },
+    {
+      "pagePath":"pages/search/search",
+      "text": "图书",
+      "iconPath": "icons/read.png",
+      "selectedIconPath": "icons/read_active.png"
+    },
+        {
+          "pagePath": "pages/search/index",
+          "text": "分类",
+          "iconPath": "icons/clas.png",
+          "selectedIconPath": "icons/clas_active.png"
+        },
+    {
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "icons/person.png",
+      "selectedIconPath": "icons/person_active.png"
+    }
+  ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

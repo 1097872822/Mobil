@@ -1,0 +1,92 @@
+.video_vo video {
+    width: 100%;
+}
+.video_content{
+    margin: 40rpx 30rpx;
+}
+.danmuArea{
+    margin: 30rpx;
+    display: flex;
+    flex-direction: row;
+}
+.danmuArea input{
+    border: 1rpx solid #d81e06;
+    border-radius: 15rpx;
+    height: 100rpx;
+    flex-grow: 1;
+}
+.danmuArea button{
+    color: white;
+    background-color: #d81e06;
+}
+.vi_con_de{
+    margin-top: 10rpx;
+    display: flex;
+}
+.vi_class{
+    flex: 3;
+}
+.vi_class text{
+    text-align: center;
+    border: rgb(68, 118, 212) 1rpx solid;
+    border-radius:10rpx;
+    padding: 5rpx;
+    font-size: 23rpx;
+    color: rgb(68, 118, 212);
+}
+.video_name{
+    font-size: 30rpx;
+    font-weight: bolder;
+}
+.tool_item{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10rpx 0;
+
+}
+.tool_item button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.tool_item image{
+    width: 30%;
+    text-align: center;
+}
+.collet_text{
+    font-size:36rpx;
+    border: 1rpx solid #d81e06;
+    padding: 10rpx 30rpx;
+    border-radius: 20rpx;
+    color: #d81e06;
+}
+.de_con_drief {
+    display: flex;
+    margin: 30rpx 0;
+}
+
+.de_con_drief_img {
+    width: 5%;
+}
+
+.de_con_drief_text {
+    font-size: 30rpx;
+    float: left;
+}
+.videonext{
+    font-size: 30rpx;
+    margin: 10rpx;
+    color: #d81e06;
+}
+.video_dife{
+    margin: 30rpx;
+    font-size: 30rpx;
+    color: darkgrey;
+}

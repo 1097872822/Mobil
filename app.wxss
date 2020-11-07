@@ -1,0 +1,25 @@
+/**app.wxss**/
+@import "./styles/iconfont.wxss";
+page,view,text,swiper,swiper-item,image,navigator{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+page{
+  /* 定义主题颜色 */
+  --themeColor:#d81e06;
+  /* 定义统一大小字体
+  1px=2rpx
+   */
+   font-size: 38rpx;
+
+}

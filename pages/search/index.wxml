@@ -1,0 +1,8 @@
+<view class="cates">
+    <SearchInput></SearchInput>
+    <view class="content">
+        <navigator class="items {{index===currenIndex?'active':''}}" wx:for="{{MenuList}}" wx:key="*this" bindtap="handleItemTap" url="/pages/books_list/index?caId={{item.caId}}">
+            <view class="texts">{{item.caName}}</view>
+        </navigator>
+    </view>
+</view>

@@ -1,0 +1,130 @@
+/* pages/search/search.wxss */
+.index_swiper{
+    
+}
+.swipers{
+width: 750rpx;
+height: 340rpx;
+}
+.swipers image{
+    width: 100%;
+
+}
+
+
+
+.im_item{
+    width: 60%;
+}
+.cate_text{
+    font-size: 25rpx;
+    color: #666666;
+    position: absolute;
+    bottom: 0;
+
+}
+.cate_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    margin: 0 auto;
+    position: relative;
+    padding: 20rpx;
+
+}
+.index_floor{
+    margin-top: 30rpx;
+}
+.floor_group{
+
+    margin: 30rpx 0;
+    padding-bottom: 20rpx;
+    border-bottom: 1px solid rgb(177, 198, 219);
+}
+.floor_title{
+    
+    display: flex;
+    height: 70rpx;
+    text-align: center;
+}
+.floor_title_it{
+    position:absolute;
+    left:10rpx;
+    display: flex;
+    font-size: 50rpx;
+    font-weight: bolder;
+    line-height: 70rpx;
+}
+.btn_mo{
+    display: flex; 
+    position:absolute;
+    right:10rpx;
+    line-height: 70rpx;
+}
+.more{
+    width: 130rpx;
+    text-align: center;
+    color: dimgrey;
+    font-weight: bolder;
+    border: darkgray 1rpx solid;
+    border-radius:20rpx;
+    font-size: 25rpx;
+}
+.floor_list{}
+.floor_list_item_fir{
+}
+.ranking_list_im_fir{
+    width: 300rpx;
+    height: 550rpx;
+    display: flex;
+    float: left;
+}
+.rank_list_name_fir{
+    font-size: 40rpx;
+    font-weight: bolder;
+}
+.rank_list_brief{
+    margin: 10rpx 0;
+    font-size: 30rpx;
+    color: dimgrey;
+    display: -webkit-box;
+    line-height: 40rpx;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:3;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+.rank_list_writer{
+    font-size: 25rpx;
+    color: dimgrey;
+}
+
+.floor_list_items{
+    height:430rpx;
+    width: 100%;
+    display: flex;
+}
+.floor_list_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    margin: 0 auto;
+    position: relative;
+    padding: 5rpx;
+
+}
+.ranking_list_im{    
+    width: 100%;
+}
+.rank_list_name{
+    position: absolute;
+    font-size: 35rpx;
+    font-weight: bolder;
+    bottom: 0;
+}
+.v_cc{
+    margin: 20rpx 0;
+}

@@ -1,0 +1,27 @@
+<view class="information">
+    <view class="user_img_wrap">
+        <view class="user_info">
+            <image class="user_icon" src="https://wyl-1300435080.cos.ap-chengdu.myqcloud.com/12654376543.png"></image>
+        </view>
+    </view>
+    <view class="paiperson">
+        <view class="stuin">
+            <view class="uno">学号</view>
+            <view class="sno">{{person.uNo}}</view>
+        </view>
+        <view class="stuin">
+            <view class="uno">姓名</view>
+            <view class="sno">{{person.uName}}</view>
+        </view>
+        <view class="stuin">
+            <view class="uno">QQ邮箱</view>
+            <view class="sno">{{person.uQq}}</view>
+        </view>
+    </view>
+    <navigator url="/pages/changePwd/index" >
+        <view class="xiugai">
+            修改密码
+        </view>
+    </navigator>
+      
+</view>

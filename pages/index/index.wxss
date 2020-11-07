@@ -1,0 +1,46 @@
+/**index.wxss**/
+
+.goodbook{
+  margin:0 0 10rpx 0;
+  border-bottom: red solid 2rpx;
+}
+.good{
+  margin:10rpx 0;
+width: 100%;
+height: 70rpx;
+letter-spacing:20;
+text-align: center;
+}
+.good_text{
+  line-height:70rpx;
+  color: darkblue;
+  font-weight: bolder;
+}
+.zhinan_1_text1{
+  height:60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 35rpx;
+  color: rgb(48, 47, 47);
+
+}
+.zhinan_1{
+  text-align: center;
+  font-size: 35rpx; 
+  color: azure; 
+  height: 70rpx; 
+  margin: 10rpx ;
+  line-height: 70rpx;
+  background: brown;
+ }
+.rentrule{
+  margin: 10rpx;
+}
+.zhinan_1_text{
+  display: block;
+}
+.zhinan_2{ 
+  font-size: 35rpx;
+  color: rgb(48, 47, 47);
+  line-height: 75rpx;
+}

@@ -1,0 +1,26 @@
+<import src="../../components/nullTip/nullTip.wxml" />
+<view class="collect_main">
+   <block wx:if="{{collect.length == 0}}">
+      <view class="weimain">
+         <view class="weitext">亲，找不到书籍的收藏</view>
+         <navigator class="gogo" url="/pages/search/search" open-type="switchTab">去逛逛</navigator>
+      </view>
+   </block>
+   <block wx:else>
+      <view class="floor_list">
+         <view class="bookPaionly" wx:for="{{collect}}" wx:key="bookId">
+            <navigator class="bopai" url="/pages/book_detail/index?bookId={{item.bookId}}">
+               <view class="floor_list_item_fir">
+                  <image class="ranking_list_im_fir" src="{{item.bookImg}}" mode="widthFix" />
+               </view>
+               <view class="paitextconcent">
+                  <view class="rank_list_name_fir">{{item.bookName}}</view>
+               </view>
+            </navigator>
+            <view class="quxiao" bindtap="handleQuxiao" id="{{item.bookId}}">
+               <text class="quxiaotext">取消收藏</text>
+            </view>
+         </view>
+      </view>
+   </block>
+</view>

@@ -1,0 +1,44 @@
+<!-- index.wxml -->
+<view class="goodbook_main">
+  <view class="goodbook">
+    <view class="good">
+      <text class="good_text">好 书 推 荐</text>
+    </view>
+    <swiper autoplay="{{true}}" indicator-dots indicator-active-color="red" circular="{{true}}" interval="{{1000}}" vertical="{{true}}">
+      <swiper-item wx:for="{{bookRecommend}}" wx:key="index">
+        <navigator class="" target="" url="../book_detail/index?bookId={{item.bookId}}" hover-class="navigator-hover" open-type="navigate">
+          <image wx:if="{{bookRecommend}}" mode="widthFix" src="{{bookRecommend[index].bookImg}}"></image>
+          <image wx:else mode="widthFix" src="../../images/1.jpg"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="index_zhinan">
+    <view class="good">
+      <text class="good_text">入 馆 指 南</text>
+    </view>
+    <view class="kaifangtime">
+      <text decode="{{true}}">开放时间：\n</text>
+      <view class="zhinan_1_text1">
+        <text decode="{{true}}">周一至周日</text>
+      </view>
+      <view class="zhinan_1">
+        <text class="zhinan_1_text">上午 8：00~11：30\n</text>
+      </view>
+      <view class="zhinan_1">
+        <text class="zhinan_1_text">下午 1：00~5：30\n</text>
+      </view>
+      <view class="zhinan_1">
+        <text class="zhinan_1_text">晚上 6：00~8：30</text>
+      </view>
+    </view>
+    <view class="rentrule">
+      <text decode="{{true}}">借阅规则：\n</text>
+      <view class="zhinan_2">
+        <!-- <text decode="{{true}}">借阅期限为30本，30天内可续借1次，将总时间延长至60天。\n</text> -->
+        <text decode="{{true}}">请爱护书籍，损坏或丢失需照价赔偿。\n</text>
+        <!-- <text decode="{{true}}">学生读者同时可借出书籍4本。\n</text> -->
+      </view>
+    </view>
+  </view>
+</view>

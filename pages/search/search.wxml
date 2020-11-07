@@ -1,0 +1,116 @@
+<view class="find_index">
+   <!-- 搜索框 开始 -->
+   <SearchInput></SearchInput>
+   <!-- 搜索框 结束 -->
+</view>
+<!-- 父组件传递数据通过标签属性子组件传递方式
+   子组件接受数据
+   数据当成是data中的数据直接使用 
+   子向父传递数据 通过事件的方式传递
+   在子组件的标签上加一个 自定义的事件 -->
+<Tabs tabs="{{tabs}}" binditemChange="handleItemChange">
+   <block wx:if="{{tabs[0].isActive}}">
+      <!-- 轮播图开始 -->
+      <view class="index_swiper">
+         <swiper class="swipers" autoplay="{{true}}" indicator-dots="{{true}}" circular="{{true}}">
+            <swiper-item wx:for="{{swiperList}}" wx:key="sw_id">
+               <navigator url="{{item.navigatoUrl}}">
+                  <image class="" src="{{item.swImg}}" mode="widthFix"></image>
+               </navigator>
+            </swiper-item>
+         </swiper>
+      </view>
+      <!-- 轮播图结束 -->
+      <!-- 楼层 开始 -->
+      <view class="index_floor">
+         <view class="floor_group">
+            <!-- 标题 -->
+            <view class="floor_title">
+               <view class="floor_title_it">阅读排行榜</view>
+               <view class="btn_mo">
+                  <button class="more" bindtap="handlePaiChange">更 多</button>
+               </view>
+            </view>
+            <!-- 内容 -->
+            <view class="floor_list">
+               <navigator url="/pages/book_detail/index?bookId={{bookPaiList[0].bookid}}">
+                  <view class="floor_list_item_fir">
+                     <image class="ranking_list_im_fir" src="{{bookPaiList[0].bookImg}}" mode="widthFix" />
+                     <view class="rank_list_name_fir">{{bookPaiList[0].bookname}}</view>
+                     <view class="rank_list_brief">{{bookPaiList[0].bookIn}}</view>
+                     <text class="rank_list_writer">作者: {{bookPaiList[0].bookAuthor}}</text>
+                  </view>
+               </navigator>
+               <view class="floor_list_items">
+                  <navigator class="floor_list_item" wx:for="{{bookPaiList}}" wx:key wx:for-item="items" wx:if="{{index >0&&index <4}}" url="/pages/book_detail/index?bookId={{items.bookid}}">
+                     <image class="ranking_list_im" src="{{items.bookImg}}" mode="widthFix" />
+                     <text class="rank_list_name">{{items.bookname}}</text>
+                  </navigator>
+               </view>
+            </view>
+         </view>
+         <view class="line"></view>
+         <view class="floor_group">
+            <!-- 标题 -->
+            <view class="floor_title">
+               <view class="floor_title_it">新书上架</view>
+               <view class="btn_mo">
+                  <button class="more">更 多</button>
+               </view>
+            </view>
+            <!-- 内容 -->
+            <view class="floor_list">
+               <view class="floor_list_items">
+                  <!-- <block> -->
+                  <navigator class="floor_list_item" wx:for="{{bookTimeList}}" wx:key wx:if="{{index< 3}}" url="/pages/book_detail/index?bookId={{item.bookid}}">
+                     <image class="ranking_list_im" src="{{item.bookImg}}" mode="widthFix" />
+                     <text class="rank_list_name">{{item.bookname}}</text>
+                  </navigator>
+                  <!-- </block> -->
+               </view>
+            </view>
+         </view>
+         <view class="line"></view>
+         <view class="floor_group">
+            <!-- 标题 -->
+            <view class="floor_title">
+               <view class="floor_title_it">生活</view>
+               <view class="btn_mo">
+                  <button class="more" bindtap="goToPaiMore">更 多</button>
+               </view>
+            </view>
+            <!-- 内容 -->
+            <view class="floor_list">
+               <view class="floor_list_items">
+                  <navigator class="floor_list_item" wx:for="{{bookList}}" wx:key wx:if="{{index< 3}}" url="/pages/book_detail/index?bookId={{item.bookId}}">
+                     <image class="ranking_list_im" src="{{item.bookImg}}" mode="widthFix" />
+                     <text class="rank_list_name">{{item.bookName}}</text>
+                  </navigator>
+               </view>
+            </view>
+         </view>
+      </view>
+      <!-- 楼层 结束 -->
+   </block>
+   <block wx:if="{{tabs[1].isActive}}">
+      <view class="video_swiper">
+         <swiper autoplay="{{true}}" indicator-dots indicator-active-color="red" circular="{{true}}" interval="{{2000}}" vertical="{{false}}">
+            <swiper-item>
+               <image mode="widthFix" src="../../images/vo.jpg"></image>
+            </swiper-item>
+            <swiper-item>
+               <image mode="widthFix" src="../../images/vo.jpg"></image>
+            </swiper-item>
+         </swiper>
+      </view>
+      <view class="video_warps">
+         <navigator class="v_cc" wx:for="{{videoList}}" wx:key="vId" url="/pages/video_detail/index?vId={{item.vId}}">
+            <view class="floor_list_item_fir">
+               <image class="ranking_list_im_fir" src="{{item.vImg}}" mode="widthFix" />
+               <view class="rank_list_name_fir">{{item.vName}}</view>
+               <view class="rank_list_brief">{{item.vConcent}}</view>
+            </view>
+         </navigator>
+      </view>
+   </block>
+</Tabs>

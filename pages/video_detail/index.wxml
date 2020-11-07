@@ -1,0 +1,40 @@
+<view class="video_vo">
+    <video  id="myVideo" src="{{v_deail.vUrl}}"  controls="{{true}}" enable-danmu="{{true}}" danmu-btn="{{true}}"></video>
+</view>
+<view class="danmuArea">
+    <input type="text" placeholder=" 请输入弹幕内容" bindinput="getDanmu"></input>
+    <button bindtap ="sendDanmu">发送弹幕</button>
+</view>
+<view class="video_content">
+    <text class="video_name">{{v_deail.vName}}</text>
+    <view class="video_dife">
+        {{v_deail.vConcent}}
+    </view>
+    <view class="vi_con_de">
+        <!-- <view class="vi_class">
+            <!-- <text>人文地理</text> -->
+        <!-- </view>
+        <view class="tool_item">
+            <image mode="widthFix" src="../../icons/ic_collet_not.png"></image>
+            <view class="collet_text">收藏</view>
+            <button></button> -->
+        <!-- </view> --> 
+        <view class="tool_item">
+            <!-- <image mode="widthFix" src="../../icons/ic_share.png"></image> -->
+            <view class="collet_text">分享给好友</view>
+            <button open-type="share"></button>
+        </view>
+    </view>
+        <view class="de_con_drief">
+        <image class="de_con_drief_img" src="/icons/triangle.png" mode="widthFix"></image>
+        <view class="de_con_drief_text">更多</view>
+    </view>
+    <view class="videonext" bindtap='clickup'>
+        上一个视频
+    </view>
+        
+    <view class="videonext" bindtap='clickup' >
+        下一个视频
+    </view>
+
+</view>

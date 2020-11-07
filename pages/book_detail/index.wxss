@@ -1,0 +1,208 @@
+page {
+    padding-bottom: 90rpx;
+}
+
+.detail_img {
+    margin: 20rpx 0;
+    text-align: center;
+}
+
+.detail_img image {
+    width: 40%;
+}
+
+
+.books_det_name {
+    font-size: 35rpx;
+    font-weight: bold;
+    margin: 10rpx 0;
+}
+
+.books_det_author {
+    margin: 10rpx 0;
+    font-size: 28rpx;
+    color: #cccccc;
+}
+
+.de_con_drief {
+    display: flex;
+    margin: 30rpx 0;
+}
+
+.de_con_drief_img {
+    width: 5%;
+}
+
+.de_con_drief_text {
+    font-size: 30rpx;
+    float: left;
+}
+
+.drief_content {
+    margin: 0 10rpx;
+}
+
+
+.drief_concent_item {
+    padding: 5rpx;
+    font-size: 30rpx;
+}
+
+.commenttotal {
+    margin: 0 10rpx;
+    padding-bottom: 10rpx;
+    margin-bottom: 10rpx;
+    border-bottom: 1rpx solid #ccc;
+
+}
+
+.commet {
+    display: flex;
+    margin: 15rpx 5rpx;
+}
+
+.comment_p {
+    flex: 4;
+    font-size: 28rpx;
+    margin: 5rpx 0;
+    color: #656565;
+}
+
+.comment_t {
+    flex: 1;
+    font-size: 28rpx;
+    color: #656565;
+}
+
+.comment_n {
+    font-size: 30rpx;
+}
+
+.wucomment {
+    width: 100%;
+    height: 90rpx;
+    text-align: center;
+    line-height: 90rpx;
+}
+
+.btm_tool {
+    border-top: 1rpx solid #ccc;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 90rpx;
+    background-color: #ffffff;
+    display: flex;
+}
+
+.tool_item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.tool_item button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.tool_item image {
+    width: 40%;
+
+    text-align: center;
+}
+
+.tool_item1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.tool_item1 button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.tool_item1 image {
+    width: 40%;
+
+    text-align: center;
+}
+
+.iconfont.icon-shoucang111 {
+    color: orangered;
+}
+
+.collet_text {
+    font-size: 28rpx;
+
+}
+
+.tool_item.btn_pin {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: sandybrown;
+    color: #ffffff;
+    font-weight: 200;
+    border-radius: 50rpx;
+}
+
+.tool_item.btn_yu {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: sandybrown;
+    color: #ffffff;
+    font-weight: 200;
+    border-radius: 50rpx;
+}
+
+.tool_item.btn_bro {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: tomato;
+    color: #ffffff;
+    font-weight: 200;
+    border-radius: 50rpx;
+}
+
+.tool_item.btn_bro1 {
+    background-color: rgb(99, 97, 96);
+}
+
+.tool_item.btn_yu {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(99, 97, 96);
+    color: #ffffff;
+    font-weight: 200;
+    border-radius: 50rpx;
+}

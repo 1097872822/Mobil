@@ -1,0 +1,25 @@
+<import src="../../components/nullTip/nullTip.wxml" />
+<view class="collect_main">
+   <block wx:if="{{BorrowInfo.length == 0}}">
+      <view class="weimain">
+         <view class="weitext">亲，还未借阅书籍</view>
+         <navigator class="gogo" url="/pages/search/search" open-type="switchTab">去逛逛</navigator>
+      </view>
+   </block>
+   <block wx:else>
+      <view class="floor_list">
+         <navigator wx:for="{{BorrowInfo}}" wx:key="borrowId" url="/pages/book_detail/index?bookId={{item.bookId}}">
+            <view class="bookPaionly">
+               <view class="floor_list_item_fir">
+                  <image class="ranking_list_im_fir" src="{{item.bookImg}}" mode="widthFix" />
+               </view>
+               <view class="paitextconcent">
+                  <view class="rank_list_name_fir">{{item.bookName}}</view>
+                  <view class="rank_time">借阅开始：{{item.addTime}}</view>
+                  <view class="rank_time">借阅结束：{{item.stopTime}}</view>
+               </view>
+            </view>
+         </navigator>
+      </view>
+   </block>
+</view>

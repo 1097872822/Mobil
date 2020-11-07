@@ -1,0 +1,60 @@
+/* pages/collect/index.wxss */
+.collect_main{
+    margin: 0 auto;
+    padding: 10rpx;
+}
+.weimain{
+    text-align: center;
+}
+.weitext{
+    margin: 177rpx;
+}
+.gogo{
+    margin: 267rpx;
+    color: #d81e06;
+    border: 1rpx solid #d81e06;
+    border-radius: 50rpx;
+    width: 186rpx;
+    height:65rpx;
+}
+.bookPaionly{
+    margin: 20rpx 0;
+    width: 100%;
+    height:100px;
+    display: flex;
+}
+.bopai{
+    flex: 3;
+    display: flex;
+}
+
+.painumtext{
+    text-align: center;
+    line-height: 305rpx;
+}
+.floor_list_item_fir{
+    flex: 1;
+}
+.ranking_list_im_fir{
+    width: 90%;
+   
+}
+.paitextconcent{
+    flex: 2;
+}
+.rank_list_name_fir{
+    font-size: 40rpx;
+    font-weight: bolder;
+    line-height: 225rpx;
+}
+.quxiao{
+flex: 1;
+}
+.quxiaotext{
+color: #cccccc;
+border: 1rpx solid #cccccc;
+font-size: 30rpx;
+padding: 10rpx;
+border-radius: 40rpx;
+line-height: 225rpx;
+}

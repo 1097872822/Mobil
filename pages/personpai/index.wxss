@@ -1,0 +1,40 @@
+/* pages/personpai/index.wxss */
+.paiming{
+    margin: 0,auto;
+}
+.paiperson{
+    margin: 20rpx;
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid #d81e06;
+}
+.person{
+    margin: 30rpx;
+    padding: 15rpx 0;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px ridge #cccccc;
+}
+.person1{
+    margin: 30rpx;
+    padding: 15rpx 0;
+    display: flex;
+    width: 100%;
+    background-color: palegreen;
+    border-bottom: 1px ridge #cccccc;
+}
+.paino{
+    flex: 1;
+    text-align: center;
+
+}
+.uno{
+    flex: 1;
+    text-align: center;
+}
+.uname{
+    flex: 1;
+    text-align: center;}
+.uborrow{
+    flex: 1;
+    text-align: center;}

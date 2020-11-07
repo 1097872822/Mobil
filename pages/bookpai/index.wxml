@@ -1,0 +1,34 @@
+<view class="paiconcent">
+    <navigator wx:for="{{bookPaiList}}" wx:key wx:for-item="items" wx:if="{{index <20}}" url="/pages/book_detail/index?bookId={{items.bookid}}">
+        <view class="bookPaionly">
+            <view class="painum" wx:if="{{index==0}}">
+                <view class="iconfont icon-icon-test" ></view>
+                  
+            </view>
+            <view class="painum" wx:elif="{{index==1}}">
+                <view class="iconfont icon-dier" ></view>
+                  
+            </view>
+            <view class="painum" wx:elif="{{index==2}}">
+                <view class="iconfont icon-disan" ></view>
+                  
+            </view>
+            <view class="painum" wx:else>
+                <view class="painumtext" >{{index+1}}</view>
+                  
+            </view>
+            <view class="floor_list_item_fir">
+                <image class="ranking_list_im_fir" src="{{items.bookImg}}" mode="widthFix" />
+            </view>
+            <view class="paitextconcent">
+                <view class="rank_list_name_fir">{{items.bookname}}</view>
+                <view class="rank_list_brief">{{items.bookIn}}</view>
+                <text class="rank_list_writer">作者: {{items.bookAuthor}}</text>
+                <view class="boaddco">
+                    <view class="bo">借阅({{items.borrowNumber}})次</view>
+                    <view class="bo">收藏({{items.collectNumber}})次</view>
+                </view>
+            </view>
+        </view>
+    </navigator>
+</view>

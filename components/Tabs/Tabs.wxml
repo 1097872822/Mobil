@@ -1,0 +1,21 @@
+<view class="tabs">
+    <view class="tabs_title">
+        <!-- <view class="title_item active">推荐</view>
+        <view class="title_item">看书</view>
+        <view class="title_item">视频</view> -->
+        <view wx:for="{{tabs}}"
+            wx:key="id"
+            class="title_item {{item.isActive?'active':' '}}"
+            bindtap="hanldeItemTap"
+            data-index="{{index}}">
+            {{item.name}}
+        </view>
+    </view>
+    <view class="tabs_content">
+    <!-- slot 标签 占位符 插槽
+    父组件调用 子组件的时候 在传递 标签过来 最终 这些被传递的标签
+    就会替换slot 插槽的位置
+     -->
+     <slot ></slot>
+    </view>
+</view>

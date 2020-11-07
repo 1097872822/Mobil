@@ -1,0 +1,21 @@
+<view class="collect_main">
+   <view class="floor_list">
+      <navigator wx:for="{{AllBorrow}}" wx:key="bohuaiId" url="/pages/book_detail/index?bookName={{item.bookName}}">
+         <view class="bookPaionly">
+            <view class="floor_list_item_fir">
+               <image class="ranking_list_im_fir" src="{{item.bookImg}}" mode="widthFix" />
+            </view>
+            <view class="paitextconcent" wx:if="{{item.state==0}}">
+               <view class="rank_list_name_fir">{{item.bookName}}</view>
+               <view class="rank_time2">借阅开始：{{item.borrowTime}}</view>
+               <view class="rank_time1">状态：未归还</view>
+            </view>
+            <view class="paitextconcent" wx:else>
+               <view class="rank_list_name_fir">{{item.bookName}}</view>
+               <view class="rank_time2">借阅开始：{{item.borrowTime}}</view>
+               <view class="rank_time">状态：已归还</view>
+            </view>
+         </view>
+      </navigator>
+   </view>
+</view>

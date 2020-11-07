@@ -1,0 +1,60 @@
+<view class="detail_img">
+    <image mode="widthFix" src="{{booksObj.bookImg?booksObj.bookImg:'https://wyl-1300435080.cos.ap-chengdu.myqcloud.com/1233455.jpg'}}"></image>
+    <view class="books_det_name">{{booksObj.bookName}}</view>
+</view>
+<view class="detail_concent">
+    <view class="de_con_drief">
+        <image class="de_con_drief_img" src="/icons/triangle.png" mode="widthFix"></image>
+        <view class="de_con_drief_text">内容简介</view>
+    </view>
+    <view class="drief_content">
+        <!-- <text class="drief_concent_item" decode="{{true}}"> -->
+        <!-- 富文本 -->
+        <rich-text class="drief_concent_item" nodes="{{booksObj.bookIntroduce}}" bindtap="tap"></rich-text>
+        <!-- </text> -->
+    </view>
+    <view class="de_con_drief">
+        <image class="de_con_drief_img" src="/icons/triangle.png" mode="widthFix"></image>
+        <view class="de_con_drief_text">更多信息</view>
+    </view>
+    <view class="books_det_author">作者：{{booksObj.bookAuthor}}</view>
+    <view class="books_det_author">出版社：{{booksObj.bookPress}}</view>
+    <view class="de_con_drief">
+        <image class="de_con_drief_img" src="/icons/triangle.png" mode="widthFix"></image>
+        <view class="de_con_drief_text">评论</view>
+    </view>
+    <view wx:if="{{CommentInfo}}!='' ">
+        <view class="commenttotal" wx:for="{{CommentInfo}}" wx:key="index">
+            <view class="commet">
+                <view class="comment_p">
+                    {{CommentInfo[index].uNo}} {{CommentInfo[index].uName}}
+                </view>
+                <view class="comment_t">{{CommentInfo[index].cTime}}</view>
+            </view>
+            <view class="comment_n">{{CommentInfo[index].cConcent}}</view>
+        </view>
+    </view>
+    <view wx:else class="wucomment">暂无评论~</view>
+</view>
+<view class="btm_tool">
+    <view class="tool_item">
+        <!-- <image mode="widthFix" src="../../icons/ic_share.png"></image> -->
+        <text class="iconfont icon-fenxiang"></text>
+        <view class="collet_text">分享</view>
+        <button open-type="share"></button>
+    </view>
+    <view class="tool_item1" bindtap="handleCollect">
+        <!-- <image mode="widthFix" src="../../icons/ic_collect.png"></image> -->
+        <text class="iconfont {{isCollect?'icon-shoucang111':'icon-shoucang'}} "></text>
+        <view class="collet_text">收藏</view>
+        <button></button>
+    </view>
+    <navigator class="tool_item btn_pin" url="../comment/index?bookid={{booksObj.bookId}}">
+        评论
+    </navigator>
+    <view class="tool_item btn_yu" wx:if="{{isBorrow}}">已借阅</view>
+    <view wx:elif="{{booksObj.bookNumber>0}}" class="tool_item btn_bro" bindtap="handleBookAdd">
+        借阅({{booksObj.bookNumber}})
+    </view>
+    <view wx:else class="tool_item btn_yu">库存不足</view>
+</view>

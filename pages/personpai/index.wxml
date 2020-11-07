@@ -1,0 +1,26 @@
+<view class="paiming">
+    <view class="paiperson">
+        <view class="paino">名次</view>
+        <view class="uno">学号</view>
+        <view class="uname">姓名</view>
+        <view class="uborrow">借阅数量</view>
+    </view>
+    <view class="per" wx:for="{{stu}}" wx:key="uId">
+        <block wx:if="{{item.uid==pId}}">
+            <view class="person1">
+                <view class="paino">{{index+1}}</view>
+                <view class="uno">{{item.uno}}</view>
+                <view class="uname">{{item.uname}}</view>
+                <view class="uborrow">{{item.uborrow}}本</view>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="person">
+                <view class="paino">{{index+1}}</view>
+                <view class="uno">{{item.uno}}</view>
+                <view class="uname">{{item.uname}}</view>
+                <view class="uborrow">{{item.uborrow}}本</view>
+            </view>
+        </block>
+    </view>
+</view>

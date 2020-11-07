@@ -1,0 +1,31 @@
+page{
+    width: 100%;
+}
+
+
+.content{
+    margin: 70rpx 30rpx;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.items{
+    width: 40%;
+    text-align: center;
+    margin: 15rpx 10rpx;
+    border: darkgray 1rpx solid;
+    border-radius: 15rpx;
+    padding: 10rpx;
+    
+    
+}
+.texts{  
+    padding:25rpx;
+    font-size: 36rpx;
+    color: darkslategray;
+    font-weight: bolder;}
+.content_item_de.active{
+    color: white;
+    font-weight: bolder;
+   background-color:#d81e06;
+}

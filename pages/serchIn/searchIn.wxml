@@ -1,0 +1,20 @@
+<view class="search_row">
+    <input value="{{inpValue}}" placeholder="请输入你要搜索的书籍" bindinput="handleInput"></input>
+    <button hidden="{{!isFocus}}" bindtap="handleCancel">取消</button>
+</view>
+<view class="search_content">
+    <navigator url="/pages/book_detail/index?bookId={{item.id}}" class="search_item" wx:for="{{books}}" wx:key="id">
+        <view class="floor_list_item_fir">
+            <image class="ranking_list_im_fir" src="{{item.bookImg}}" mode="widthFix" />
+            <view class="rank_list_name_fir">{{item.bookName}}</view>
+            <view class="rank_list_brief">{{item.bookBrief}}</view>
+            <view class="rank_list_writer">作者: {{item.bookAuthor}}</view>
+            <view class="rank_list_writer">出版社: {{item.bookPress}}</view>
+            <view class="boaddco">
+                <view class="bo">借阅({{item.borrowNumber}})次</view>
+                <view class="bo">收藏({{item.collectNumber}})次</view>
+            </view>
+
+        </view>
+    </navigator>
+</view>

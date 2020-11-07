@@ -1,0 +1,12 @@
+<view class="fb_main">
+    <view class="fb_title">评论</view>
+    <view class="fb_content">
+        <textarea value="{{commentContent}}" bindinput="handleTextinput" placeholder="请填写评论"></textarea>
+    </view>
+    <view class="form_btn_warp">
+        <button bindtap="handleFormSubmit" type="warn">
+            <icon class="" type="success_no_circle" size="23" color="white"></icon>
+            提交
+        </button>
+    </view>
+</view>

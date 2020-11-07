@@ -1,0 +1,52 @@
+<!-- {{userinfo.avatarUrl}} -->
+<view class="user_info_wrap">
+    <view  wx:if="{{userinfo.uName}}" class="user_img_wrap">
+        <image class="user_bg" src="/images/vo.jpg"></image>
+        <view class="user_info">
+            <image class="user_icon" src="/images/vo.jpg"></image>
+            <view class="user_name">{{userinfo.uName}}</view>
+        </view>
+    </view>
+    <view  wx:else class="user_btn">
+        <navigator url="/pages/login/index">登录</navigator>
+          
+    </view>
+</view>
+<view class="user_content">
+    <view class="user_mian">
+        <!-- 历史足迹 -->
+        <view class="history_warp">
+            <navigator url="/pages/collect/index" >
+                <view class="his_num">{{collectNums}}</view>
+                <view class="his_name">我的收藏</view>
+            </navigator>
+            <navigator url="/pages/borrow/index" >
+                <view class="his_num">{{borrowmun}}</view>
+                <view class="his_name">我的借阅</view>
+            </navigator>
+           
+            <navigator url="/pages/personpai/index" >
+                <text class="iconfont icon-paiming"></text>
+                <!-- <view class="his_num">0</view> -->
+                <view class="his_name">借阅排行</view>
+            </navigator>
+        </view>
+        <view class="app_info_wrap">
+            <navigator class="app_info_item app_info_contact" url="/pages/booknumall/index">
+                <text>累计借书量</text>
+                <text>{{userinfo.uBorrow}}本</text>
+            </navigator>
+            <navigator url="/pages/person_info/index" class="app_info_item">个人信息</navigator>
+            <view class="app_info_item app_info_contact">
+                <text>联系客服</text>
+                <text>100-200-30000</text>
+            </view>
+            <navigator url="/pages/feedback/index" class="app_info_item">意见反馈</navigator>
+            <view class="app_info_item">关于我们</view>
+        </view>
+        <view class="recommend_wrap">
+            把应用推荐给其他人
+
+        </view>
+    </view>
+</view>
